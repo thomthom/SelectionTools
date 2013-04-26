@@ -1,0 +1,908 @@
+General
+	Title		= "Selection Toys 2.3"
+	Info		= "Copyright © Thomas Thomassen"
+	URL			= "http://www.sketchucation.com/forums/scf/viewtopic.php?f=180&t=14975"
+	AppID		= "TT_Selection_Toys"
+	Settings	= "ui_settings.dat"
+	IconPath	= "icons/Default/"
+Commands
+	SelectionToys
+		Label		= "Selection Toys"
+		Description	= "Contains access to Settings and Tools."
+	UISettings
+		Label		= "UI Settings"
+		Description	= "Lets you customize the UI."
+	UICheatSheet
+		Label		= "Cheat Sheet"
+		Description	= "List all commands."
+	UIEnableToolbar
+		Label		= "Enable Toolbar"
+		Description	= "The Toolbar must be enabled before it'll be availible."
+	SelectFaceLoops
+		Label		= "Select Edge Loops"
+		Description	= "Selects loops on faces."
+		SmallIcon	= "tool_face_loops_small.png"
+		LargeIcon	= "tool_face_loops_large.png"
+	SelectOnly
+		Label		= "Select Only"
+		Description	= "Select types of entities in the current selection."
+	SelectOnlyEdges
+		Label		= "Edges"
+		Description	= "Select all Edges in the current selection."
+		SmallIcon	= "select_edges_small.png"
+		LargeIcon	= "select_edges_large.png"
+	SelectOnlyFaces
+		Label		= "Faces"
+		Description	= "Select all Faces in the current selection."
+		SmallIcon	= "select_faces_small.png"
+		LargeIcon	= "select_faces_large.png"
+	SelectOnlyGroups
+		Label		= "Groups"
+		Description	= "Select all Groups in the current selection."
+		SmallIcon	= "select_groups_small.png"
+		LargeIcon	= "select_groups_large.png"
+	SelectOnlyComponents
+		Label		= "Components"
+		Description	= "Select all Components in the current selection."
+		SmallIcon	= "select_components_small.png"
+		LargeIcon	= "select_components_large.png"
+	SelectOnlyGuides
+		Label		= "Guides"
+		Description	= "Select all Guides in the current selection."
+		SmallIcon	= "select_clines_small.png"
+		LargeIcon	= "select_clines_large.png"
+	SelectOnlyCPoints
+		Label		= "Guide Points"
+		Description	= "Select all Guide Points in the current selection."
+		SmallIcon	= "select_cpoints_small.png"
+		LargeIcon	= "select_cpoints_large.png"
+	SelectOnlyText
+		Label		= "Text"
+		Description	= "Select all Text in the current selection."
+		SmallIcon	= "select_text_small.png"
+		LargeIcon	= "select_text_large.png"
+	SelectOnlyImages
+		Label		= "Images"
+		Description	= "Select all Images in the current selection."
+		SmallIcon	= "select_images_small.png"
+		LargeIcon	= "select_images_large.png"
+	SelectOnlySections
+		Label		= "Section Planes"
+		Description	= "Select all Section Planes in the current selection."
+		SmallIcon	= "select_section_small.png"
+		LargeIcon	= "select_section_large.png"
+	SelectOnlyCurves
+		Label		= "Curves"
+		Description	= "Select all Curves in the current selection."
+		SmallIcon	= "select_curves_small.png"
+		LargeIcon	= "select_curves_large.png"
+	SelectOnlyArcs
+		Label		= "Arcs"
+		Description	= "Select all Arcs in the current selection."
+		SmallIcon	= "select_arcs_small.png"
+		LargeIcon	= "select_arcs_large.png"
+	SelectOnlyCircles
+		Label		= "Circles"
+		Description	= "Select all Circles in the current selection."
+		SmallIcon	= "select_circles_small.png"
+		LargeIcon	= "select_circles_large.png"
+	SelectOnlyPolygons
+		Label		= "Polygons"
+		Description	= "Select all Polygons in the current selection."
+		SmallIcon	= "select_polylines_small.png"
+		LargeIcon	= "select_polylines_large.png"
+	SelectOnlyNGons
+		Label		= "n-Gons"
+		Description	= "Select all n-Gons in the current selection."
+		SmallIcon	= "select_ngons_small.png"
+		LargeIcon	= "select_ngons_large.png"
+	SelectOnly3DPolylines
+		Label		= "3D Polylines"
+		Description	= "Select all 3D Polylines in the current selection."
+		SmallIcon	= "select_3d_polyline_small.png"
+		LargeIcon	= "select_3d_polyline_large.png"
+	SelectOnlyLinearDimensions
+		Label		= "Linear Dimensions"
+		Description	= "Select all Linear Dimensions in the current selection."
+		SmallIcon	= "select_lin_dim_small.png"
+		LargeIcon	= "select_lin_dim_large.png"
+	SelectOnlyRadialDimensions
+		Label		= "Radial Dimensions"
+		Description	= "Select all Radial Dimensions in the current selection."
+		SmallIcon	= "select_rad_dim_small.png"
+		LargeIcon	= "select_rad_dim_large.png"
+	SelectOnlyFrontDefaultMaterial
+		Label		= "Front Default Material"
+		Description	= "Select everything with default material in the current selection."
+		SmallIcon	= "select_default_front_small.png"
+		LargeIcon	= "select_default_front_large.png"
+	SelectOnlyBackDefaultMaterial
+		Label		= "Back Default Material"
+		Description	= "Select everything with default backmaterial in the current selection."
+		SmallIcon	= "select_default_back_small.png"
+		LargeIcon	= "select_default_back_large.png"
+	SelectOnlyHidden
+		Label		= "Hidden"
+		Description	= "Select all Hidden entities in the current selection."
+		SmallIcon	= "select_hidden_small.png"
+		LargeIcon	= "select_hidden_large.png"
+	SelectOnlySoftEdges
+		Label		= "Soft Edges"
+		Description	= "Select all Soft Edges in the current selection."
+		SmallIcon	= "select_soft_small.png"
+		LargeIcon	= "select_soft_large.png"
+	SelectOnlySmoothEdges
+		Label		= "Smooth Edges"
+		Description	= "Select all Smooth Edges in the current selection."
+		SmallIcon	= "select_smooth_small.png"
+		LargeIcon	= "select_smooth_large.png"
+	SelectOnlyEdgeBorder
+		Label		= "Border Edges"
+		Description	= "Select all border Edges in the current selection."
+	SelectOnlySelectionBorder
+		Label		= "Selection Border"
+		Description	= "Select all border Edges in the current selection."
+	Deselect
+		Label		= "Deselect"
+		Description	= "Deselect types of entities in the current selection."
+	DeselectEdges
+		Label		= "Edges"
+		Description	= "Deselect all Edges in the current selection."
+		SmallIcon	= "deselect_edges_small.png"
+		LargeIcon	= "deselect_edges_large.png"
+	DeselectFaces
+		Label		= "Faces"
+		Description	= "Deselect all Faces in the current selection."
+		SmallIcon	= "deselect_faces_small.png"
+		LargeIcon	= "deselect_faces_large.png"
+	DeselectGroups
+		Label		= "Groups"
+		Description	= "Deselect all Groups in the current selection."
+		SmallIcon	= "deselect_groups_small.png"
+		LargeIcon	= "deselect_groups_large.png"
+	DeselectComponents
+		Label		= "Components"
+		Description	= "Deselect all Components in the current selection."
+		SmallIcon	= "deselect_components_small.png"
+		LargeIcon	= "deselect_components_large.png"
+	DeselectGuides
+		Label		= "Guides"
+		Description	= "Deselect all Guides in the current selection."
+		SmallIcon	= "deselect_clines_small.png"
+		LargeIcon	= "deselect_clines_large.png"
+	DeselectCPoints
+		Label		= "Guide Points"
+		Description	= "Deselect all Guide Points in the current selection."
+		SmallIcon	= "deselect_cpoints_small.png"
+		LargeIcon	= "deselect_cpoints_large.png"
+	DeselectText
+		Label		= "Text"
+		Description	= "Deselect all Text in the current selection."
+		SmallIcon	= "deselect_text_small.png"
+		LargeIcon	= "deselect_text_large.png"
+	DeselectImages
+		Label		= "Images"
+		Description	= "Deselect all Images in the current selection."
+		SmallIcon	= "deselect_images_small.png"
+		LargeIcon	= "deselect_images_large.png"
+	DeselectSections
+		Label		= "Section Planes"
+		Description	= "Deselect all Section Planes in the current selection."
+		SmallIcon	= "deselect_section_small.png"
+		LargeIcon	= "deselect_section_large.png"
+	DeselectCurves
+		Label		= "Curves"
+		Description	= "Deselect all Curves in the current selection."
+		SmallIcon	= "deselect_curves_small.png"
+		LargeIcon	= "deselect_curves_large.png"
+	DeselectArcs
+		Label		= "Arcs"
+		Description	= "Deselect all Arcs in the current selection."
+		SmallIcon	= "deselect_arcs_small.png"
+		LargeIcon	= "deselect_arcs_large.png"
+	DeselectCircles
+		Label		= "Circles"
+		Description	= "Deselect all Circles in the current selection."
+		SmallIcon	= "deselect_circles_small.png"
+		LargeIcon	= "deselect_circles_large.png"
+	DeselectPolygons
+		Label		= "Polygons"
+		Description	= "Deselect all Polygons in the current selection."
+		SmallIcon	= "deselect_polylines_small.png"
+		LargeIcon	= "deselect_polylines_large.png"
+	DeselectNGons
+		Label		= "n-Gons"
+		Description	= "Deselect all n-Gons in the current selection."
+		SmallIcon	= "deselect_ngons_small.png"
+		LargeIcon	= "deselect_ngons_large.png"
+	Deselect3DPolylines
+		Label		= "3D Polylines"
+		Description	= "Deselect all 3D Polylines in the current selection."
+		SmallIcon	= "deselect_3d_polyline_small.png"
+		LargeIcon	= "deselect_3d_polyline_large.png"
+	DeselectLinearDimensions
+		Label		= "Linear Dimensions"
+		Description	= "Deselect all Linear Dimensions in the current selection."
+		SmallIcon	= "deselect_lin_dim_small.png"
+		LargeIcon	= "deselect_lin_dim_large.png"
+	DeselectRadialDimensions
+		Label		= "Radial Dimensions"
+		Description	= "Deselect all Radial Dimensions in the current selection."
+		SmallIcon	= "deselect_rad_dim_small.png"
+		LargeIcon	= "deselect_rad_dim_large.png"
+	DeselectFrontDefaultMaterial
+		Label		= "Front Default Material"
+		Description	= "Deselect everything with default material in the current selection."
+		SmallIcon	= "deselect_default_front_small.png"
+		LargeIcon	= "deselect_default_front_large.png"
+	DeselectBackDefaultMaterial
+		Label		= "Back Default Material"
+		Description	= "Deselect everything with default backmaterial in the current selection."
+		SmallIcon	= "deselect_default_back_small.png"
+		LargeIcon	= "deselect_default_back_large.png"
+	DeselectHidden
+		Label		= "Hidden"
+		Description	= "Deselect all Hidden entities in the current selection."
+		SmallIcon	= "deselect_hidden_small.png"
+		LargeIcon	= "deselect_hidden_large.png"
+	DeselectSoftEdges
+		Label		= "Soft Edges"
+		Description	= "Deselect all Soft Edges in the current selection."
+		SmallIcon	= "deselect_soft_small.png"
+		LargeIcon	= "deselect_soft_large.png"
+	DeselectSmoothEdges
+		Label		= "Smooth Edges"
+		Description	= "Deselect all Smooth Edges in the current selection."
+		SmallIcon	= "deselect_smooth_small.png"
+		LargeIcon	= "deselect_smooth_large.png"
+	DeselectEdgeBorder
+		Label		= "Border Edges"
+		Description	= "Deselect all border Edges in the current selection."
+	DeselectSelectionBorder
+		Label		= "Selection Border"
+		Description	= "Deselect all border Edges in the current selection."
+	Instances
+		Label		= "Instances"
+		Description	= "Select similar types of instances."
+	SelectActiveInstances
+		Label		= "Select Active"
+		Description	= "Select all similar instances from the active context."
+	SelectInstances
+		Label		= "Select All"
+		Description	= "Select all similar instances from the whole model."
+	SelectActiveInstancesLayer
+		Label		= "Select Active from same Layer"
+		Description	= "Select all similar instances on the same layers from the active context."
+	SelectInstancesLayer
+		Label		= "Select All from same Layer"
+		Description	= "Select all similar instances on the same layers from the whole model."
+	DCInstances
+		Label		= "DC Instances"
+		Description	= "Select similar types of dynamic components."
+	SelectDCActiveInstances
+		Label		= "Select Active"
+		Description	= "Select all similar dynamic components from the active context."
+	SelectDCInstances
+		Label		= "Select All"
+		Description	= "Select all similar dynamic components from the whole model."
+	SelectDCActiveInstancesLayer
+		Label		= "Select Active from same Layer"
+		Description	= "Select all similar dynamic components on the same layers from the active context."
+	SelectDCInstancesLayer
+		Label		= "Select All from same Layer"
+		Description	= "Select all similar groups on the same layers from the whole model."
+	GroupCopies
+		Label		= "Group Copies"
+		Description	= "Select similar types of groups."
+	SelectActiveGroups
+		Label		= "Select Active"
+		Description	= "Select all similar groups from the active context."
+	SelectGroups
+		Label		= "Select All"
+		Description	= "Select all similar groups from the whole model."
+	SelectActiveGroupsLayer
+		Label		= "Select Active from same Layer"
+		Description	= "Select all similar groups on the same layers from the active context."
+	SelectGroupsLayer
+		Label		= "Select All from same Layer"
+		Description	= "Select all similar groups on the same layers from the whole model."
+	GroupsToComponents
+		Label		= "Convert into Components"
+		Description	= "Convert Group copies into Components."
+	Select
+		Label		= "Select"
+		Description	= "Various selection commands."
+	SelectActiveLayers
+		Label		= "Active on Selected Layers"
+		Description	= "Select all entities from the active contex on the same layers as the selected entities."
+	SelectAllLayers
+		Label		= "All on Selected Layers"
+		Description	= "Select all entities on the same layers as the selected entities."
+	SelectActiveMaterials
+		Label		= "Active with Selected Materials"
+		Description	= "Select all entities from the active contex with the same materials as the selected entities."
+	QuadFaceLoop
+		Label		= "Quad-face Loops"
+		Description	= "Select a ring of quad-faces. Direction determined by pre-selected Edges."
+	ConnectedMaterial
+		Label		= "Connected By Material"
+		Description	= ""
+	ConnectedBackMaterial
+		Label		= "Connected By Back Material"
+		Description	= ""
+	ConnectedLayer
+		Label		= "Connected By Layer"
+		Description	= ""
+	ConnectedPerpendicularFaces
+		Label		= "Connected Perpendicular Faces"
+		Description	= ""
+	ConnectedParallelFaces
+		Label		= "Connected Parallel Faces"
+		Description	= ""
+	ConnectedCoplanarFaces
+		Label		= "Connected Coplanar Faces"
+		Description	= ""
+	ConnectedFacesAngle
+		Label		= "Connected Faces by Angle"
+		Description	= ""
+	ConnectedFacesArea
+		Label		= "Connected Faces by Area"
+		Description	= ""
+	PerpendicularFaces
+		Label		= "Perpendicular Faces"
+		Description	= ""
+	FacesSameDirection
+		Label		= "Coplanar Faces"
+		Description	= ""
+	ParallelFaces
+		Label		= "Parallel Faces"
+		Description	= ""
+	OppositeFaces
+		Label		= "Opposite Faces"
+		Description	= "Select the closest faces directly opposite of the selected faces."
+	FacesArea
+		Label		= "Faces by Area"
+		Description	= ""
+UI
+	M_MainMenu
+		Host  = "Menu:Tools"
+		Label = "Tools Menu"
+		M_SelectionToys
+			Command	= "SelectionToys"
+			Visible	= true
+			Locked	= true
+			M_UISettings
+				Command	= "UISettings"
+				Visible	= true
+				Locked	= true
+				Group   = "Settings"
+			M_UICheatSheet
+				Command	= "UICheatSheet"
+				Visible	= true
+				Group   = "Settings"
+			M_UIEnableToolbar
+				Command	= "UIEnableToolbar"
+				Visible	= true
+				Group   = "Settings"
+			M_SelectFaceLoops
+				Command	= "SelectFaceLoops"
+				Visible	= true
+				Group   = "Tools"
+	M_Context
+		Host  = "Menu:Context"
+		Label = "Context Menu"
+		M_Instances
+			Command = "Instances"
+			Visible	= true
+			Group   = "SelectionToys"
+			M_SelectActiveInstances
+				Command	= "SelectActiveInstances"
+				Visible	= true
+			M_SelectInstances
+				Command	= "SelectInstances"
+				Visible	= true
+			M_SelectActiveInstancesLayer
+				Command	= "SelectActiveInstancesLayer"
+				Visible	= true
+			M_SelectInstancesLayer
+				Command	= "SelectInstancesLayer"
+				Visible	= true
+		M_DCInstances
+			Command = "DCInstances"
+			Visible	= true
+			Group   = "SelectionToys"
+			M_SelectDCActiveInstances
+				Command	= "SelectDCActiveInstances"
+				Visible	= true
+			M_SelectDCInstances
+				Command	= "SelectDCInstances"
+				Visible	= true
+			M_SelectDCActiveInstancesLayer
+				Command	= "SelectDCActiveInstancesLayer"
+				Visible	= true
+			M_SelectDCInstancesLayer
+				Command	= "SelectDCInstancesLayer"
+				Visible	= true
+		M_GroupCopies
+			Command = "GroupCopies"
+			Visible	= true
+			Group   = "SelectionToys"
+			M_SelectActiveGroups
+				Command	= "SelectActiveGroups"
+				Visible	= true
+			M_SelectGroups
+				Command	= "SelectGroups"
+				Visible	= true
+			M_SelectActiveGroupsLayer
+				Command	= "SelectActiveGroupsLayer"
+				Visible	= true
+			M_SelectGroupsLayer
+				Command	= "SelectGroupsLayer"
+				Visible	= true
+			M_GroupsToComponents
+				Command	= "GroupsToComponents"
+				Visible	= true
+				Group   = "Convert"
+		M_Select
+			Command	= "Select"
+			Visible	= true
+			Group   = "SelectionToys"
+			M_SelectActiveLayers
+				Command	= "SelectActiveLayers"
+				Visible	= true
+				Group   = "SelectLayers"
+			M_SelectAllLayers
+				Command	= "SelectAllLayers"
+				Visible	= true
+				Group   = "SelectLayers"
+			M_SelectActiveMaterials
+				Command	= "SelectActiveMaterials"
+				Visible	= true
+				Group   = "SelectMaterials"
+			M_QuadFaceLoop
+				Command	= "QuadFaceLoop"
+				Visible	= true
+				Group   = "SelectQuadLoops"
+			M_ConnectedMaterial_E
+				Command	= "ConnectedMaterial"
+				Visible	= true
+				Group   = "SelectEdges"
+			M_ConnectedLayer_E
+				Command	= "ConnectedLayer"
+				Visible	= true
+				Group   = "SelectEdges"
+			M_ConnectedCoplanarFaces
+				Command	= "ConnectedCoplanarFaces"
+				Visible	= true
+				Group   = "SelectConnectedFaces"
+			M_ConnectedParallelFaces
+				Command	= "ConnectedParallelFaces"
+				Visible	= true
+				Group   = "SelectConnectedFaces"
+			M_ConnectedPerpendicularFaces
+				Command	= "ConnectedPerpendicularFaces"
+				Visible	= true
+				Group   = "SelectConnectedFaces"
+			M_ConnectedFacesAngle
+				Command	= "ConnectedFacesAngle"
+				Visible	= true
+				Group   = "SelectConnectedFaces"
+			M_ConnectedFacesArea
+				Command	= "ConnectedFacesArea"
+				Visible	= true
+				Group   = "SelectConnectedFaces"
+			M_ConnectedMaterial_F
+				Command	= "ConnectedMaterial"
+				Visible	= true
+				Group   = "SelectConnectedFaces"
+			M_ConnectedBackMaterial
+				Command	= "ConnectedBackMaterial"
+				Visible	= true
+				Group   = "SelectConnectedFaces"
+			M_ConnectedLayer_F
+				Command	= "ConnectedLayer"
+				Visible	= true
+				Group   = "SelectConnectedFaces"
+			M_FacesSameDirection
+				Command	= "FacesSameDirection"
+				Visible	= true
+				Group   = "SelectSimilarFaces"
+			M_ParallelFaces
+				Command	= "ParallelFaces"
+				Visible	= true
+				Group   = "SelectSimilarFaces"
+			M_PerpendicularFaces
+				Command	= "PerpendicularFaces"
+				Visible	= true
+				Group   = "SelectSimilarFaces"
+			M_FacesArea
+				Command	= "FacesArea"
+				Visible	= true
+				Group   = "SelectSimilarFaces"
+			M_OppositeFaces
+				Command	= "OppositeFaces"
+				Visible	= true
+				Group   = "SelectRelatedFaces"
+		M_SelectOnly
+			Command	= "SelectOnly"
+			Visible	= true
+			Group   = "SelectionToys"
+			M_SelectOnlyEdges
+				Command	= "SelectOnlyEdges"
+				Visible	= true
+				Group   = "EF"
+			M_SelectOnlyFaces
+				Command	= "SelectOnlyFaces"
+				Visible	= true
+				Group   = "EF"
+			M_SelectOnlyGroups
+				Command	= "SelectOnlyGroups"
+				Visible	= true
+				Group   = "GC"
+			M_SelectOnlyComponents
+				Command	= "SelectOnlyComponents"
+				Visible	= true
+				Group   = "GC"
+			M_SelectOnlyGuides
+				Command	= "SelectOnlyGuides"
+				Visible	= true
+				Group   = "Guides"
+			M_SelectOnlyCPoints
+				Command	= "SelectOnlyCPoints"
+				Visible	= true
+				Group   = "Guides"
+			M_SelectOnlyText
+				Command	= "SelectOnlyText"
+				Visible	= true
+				Group   = "Misc"
+			M_SelectOnlyImages
+				Command	= "SelectOnlyImages"
+				Visible	= true
+				Group   = "Misc"
+			M_SelectOnlySections
+				Command	= "SelectOnlySections"
+				Visible	= true
+				Group   = "Misc"
+			M_SelectOnly3DPolylines
+				Command	= "SelectOnly3DPolylines"
+				Visible	= true
+				Group   = "Misc"
+			M_SelectOnlyCurves
+				Command	= "SelectOnlyCurves"
+				Visible	= true
+				Group   = "Curves"
+			M_SelectOnlyArcs
+				Command	= "SelectOnlyArcs"
+				Visible	= true
+				Group   = "Curves"
+			M_SelectOnlyCircles
+				Command	= "SelectOnlyCircles"
+				Visible	= true
+				Group   = "Curves"
+			M_SelectOnlyPolygons
+				Command	= "SelectOnlyPolygons"
+				Visible	= true
+				Group   = "Polygons"
+			M_SelectOnlyNGons
+				Command	= "SelectOnlyNGons"
+				Visible	= true
+				Group   = "Polygons"
+			M_SelectOnlyLinearDimensions
+				Command	= "SelectOnlyLinearDimensions"
+				Visible	= true
+				Group   = "Dimensions"
+			M_SelectOnlyRadialDimensions
+				Command	= "SelectOnlyRadialDimensions"
+				Visible	= true
+				Group   = "Dimensions"
+			M_SelectOnlyFrontDefaultMaterial
+				Command	= "SelectOnlyFrontDefaultMaterial"
+				Visible	= true
+				Group   = "Materials"
+			M_SelectOnlyBackDefaultMaterial
+				Command	= "SelectOnlyBackDefaultMaterial"
+				Visible	= true
+				Group   = "Materials"
+			M_SelectOnlyHidden
+				Command	= "SelectOnlyHidden"
+				Visible	= true
+				Group   = "SoftHidden"
+			M_SelectOnlySoftEdges
+				Command	= "SelectOnlySoftEdges"
+				Visible	= true
+				Group   = "SoftHidden"
+			M_SelectOnlySmoothEdges
+				Command	= "SelectOnlySmoothEdges"
+				Visible	= true
+				Group   = "SoftHidden"
+			M_SelectOnlyEdgeBorder
+				Command	= "SelectOnlyEdgeBorder"
+				Visible	= true
+				Group   = "OtherEdges"
+			M_SelectOnlySelectionBorder
+				Command	= "SelectOnlySelectionBorder"
+				Visible	= true
+				Group   = "OtherEdges"
+		M_Deselect
+			Command	= "Deselect"
+			Visible	= true
+			Group   = "SelectionToys"
+			M_DeselectEdges
+				Command	= "DeselectEdges"
+				Visible	= true
+				Group   = "EF"
+			M_DeselectFaces
+				Command	= "DeselectFaces"
+				Visible	= true
+				Group   = "EF"
+			M_DeselectGroups
+				Command	= "DeselectGroups"
+				Visible	= true
+				Group   = "GC"
+			M_DeselectComponents
+				Command	= "DeselectComponents"
+				Visible	= true
+				Group   = "GC"
+			M_DeselectGuides
+				Command	= "DeselectGuides"
+				Visible	= true
+				Group   = "Guides"
+			M_DeselectCPoints
+				Command	= "DeselectCPoints"
+				Visible	= true
+				Group   = "Guides"
+			M_DeselectText
+				Command	= "DeselectText"
+				Visible	= true
+				Group   = "Misc"
+			M_DeselectImages
+				Command	= "DeselectImages"
+				Visible	= true
+				Group   = "Misc"
+			M_DeselectSections
+				Command	= "DeselectSections"
+				Visible	= true
+				Group   = "Misc"
+			M_Deselect3DPolylines
+				Command	= "Deselect3DPolylines"
+				Visible	= true
+				Group   = "Misc"
+			M_DeselectCurves
+				Command	= "DeselectCurves"
+				Visible	= true
+				Group   = "Curves"
+			M_DeselectArcs
+				Command	= "DeselectArcs"
+				Visible	= true
+				Group   = "Curves"
+			M_DeselectCircles
+				Command	= "DeselectCircles"
+				Visible	= true
+				Group   = "Curves"
+			M_DeselectPolygons
+				Command	= "DeselectPolygons"
+				Visible	= true
+				Group   = "Polygons"
+			M_DeselectNGons
+				Command	= "DeselectNGons"
+				Visible	= true
+				Group   = "Polygons"
+			M_DeselectLinearDimensions
+				Command	= "DeselectLinearDimensions"
+				Visible	= true
+				Group   = "Dimensions"
+			M_DeselectRadialDimensions
+				Command	= "DeselectRadialDimensions"
+				Visible	= true
+				Group   = "Dimensions"
+			M_DeselectFrontDefaultMaterial
+				Command	= "DeselectFrontDefaultMaterial"
+				Visible	= true
+				Group   = "Materials"
+			M_DeselectBackDefaultMaterial
+				Command	= "DeselectBackDefaultMaterial"
+				Visible	= true
+				Group   = "Materials"
+			M_DeselectHidden
+				Command	= "DeselectHidden"
+				Visible	= true
+				Group   = "SoftHidden"
+			M_DeselectSoftEdges
+				Command	= "DeselectSoftEdges"
+				Visible	= true
+				Group   = "SoftHidden"
+			M_DeselectSmoothEdges
+				Command	= "DeselectSmoothEdges"
+				Visible	= true
+				Group   = "SoftHidden"
+			M_DeselectEdgeBorder
+				Command	= "DeselectEdgeBorder"
+				Visible	= true
+				Group   = "OtherEdges"
+			M_DeselectSelectionBorder
+				Command	= "DeselectSelectionBorder"
+				Visible	= true
+				Group   = "OtherEdges"
+	T_MainToolbar
+		Host  = "Toolbar:Selection Toys"
+		Label = "Toolbar"
+		T_SelectFaceLoops
+			Command	= "SelectFaceLoops"
+			Visible	= true
+			Group   = "SelectTools"
+		T_SelectOnlyEdges
+			Command	= "SelectOnlyEdges"
+			Visible	= true
+			Group   = "Select"
+		T_SelectOnlyFaces
+			Command	= "SelectOnlyFaces"
+			Visible	= true
+			Group   = "Select"
+		T_SelectOnlyGroups
+			Command	= "SelectOnlyGroups"
+			Visible	= true
+			Group   = "Select"
+		T_SelectOnlyComponents
+			Command	= "SelectOnlyComponents"
+			Visible	= true
+			Group   = "Select"
+		T_SelectOnlyGuides
+			Command	= "SelectOnlyGuides"
+			Visible	= false
+			Group   = "Select"
+		T_SelectOnlyCPoints
+			Command	= "SelectOnlyCPoints"
+			Visible	= false
+			Group   = "Select"
+		T_SelectOnlyText
+			Command	= "SelectOnlyText"
+			Visible	= false
+			Group   = "Select"
+		T_SelectOnlyImages
+			Command	= "SelectOnlyImages"
+			Visible	= false
+			Group   = "Select"
+		T_SelectOnlySections
+			Command	= "SelectOnlySections"
+			Visible	= false
+			Group   = "Select"
+		T_SelectOnly3DPolylines
+			Command	= "SelectOnly3DPolylines"
+			Visible	= false
+			Group   = "Select"
+		T_SelectOnlyCurves
+			Command	= "SelectOnlyCurves"
+			Visible	= false
+			Group   = "Select"
+		T_SelectOnlyArcs
+			Command	= "SelectOnlyArcs"
+			Visible	= false
+			Group   = "Select"
+		T_SelectOnlyCircles
+			Command	= "SelectOnlyCircles"
+			Visible	= false
+			Group   = "Select"
+		T_SelectOnlyPolygons
+			Command	= "SelectOnlyPolygons"
+			Visible	= false
+			Group   = "Select"
+		T_SelectOnlyNGons
+			Command	= "SelectOnlyNGons"
+			Visible	= false
+			Group   = "Select"
+		T_SelectOnlyLinearDimensions
+			Command	= "SelectOnlyLinearDimensions"
+			Visible	= false
+			Group   = "Select"
+		T_SelectOnlyRadialDimensions
+			Command	= "SelectOnlyRadialDimensions"
+			Visible	= false
+			Group   = "Select"
+		T_SelectOnlyFrontDefaultMaterial
+			Command	= "SelectOnlyFrontDefaultMaterial"
+			Visible	= false
+			Group   = "Select"
+		T_SelectOnlyBackDefaultMaterial
+			Command	= "SelectOnlyBackDefaultMaterial"
+			Visible	= false
+			Group   = "Select"
+		T_SelectOnlyHidden
+			Command	= "SelectOnlyHidden"
+			Visible	= false
+			Group   = "Select"
+		T_SelectOnlySoftEdges
+			Command	= "SelectOnlySoftEdges"
+			Visible	= false
+			Group   = "Select"
+		T_SelectOnlySmoothEdges
+			Command	= "SelectOnlySmoothEdges"
+			Visible	= false
+			Group   = "Select"
+		T_DeselectEdges
+			Command	= "DeselectEdges"
+			Visible	= true
+			Group   = "Deselect"
+		T_DeselectFaces
+			Command	= "DeselectFaces"
+			Visible	= true
+			Group   = "Deselect"
+		T_DeselectGroups
+			Command	= "DeselectGroups"
+			Visible	= true
+			Group   = "Deselect"
+		T_DeselectComponents
+			Command	= "DeselectComponents"
+			Visible	= true
+			Group   = "Deselect"
+		T_DeselectGuides
+			Command	= "DeselectGuides"
+			Visible	= false
+			Group   = "Deselect"
+		T_DeselectCPoints
+			Command	= "DeselectCPoints"
+			Visible	= false
+			Group   = "Deselect"
+		T_DeselectText
+			Command	= "DeselectText"
+			Visible	= false
+			Group   = "Deselect"
+		T_DeselectImages
+			Command	= "DeselectImages"
+			Visible	= false
+			Group   = "Deselect"
+		T_DeselectSections
+			Command	= "DeselectSections"
+			Visible	= false
+			Group   = "Deselect"
+		T_Deselect3DPolylines
+			Command	= "Deselect3DPolylines"
+			Visible	= false
+			Group   = "Deselect"
+		T_DeselectCurves
+			Command	= "DeselectCurves"
+			Visible	= false
+			Group   = "Deselect"
+		T_DeselectArcs
+			Command	= "DeselectArcs"
+			Visible	= false
+			Group   = "Deselect"
+		T_DeselectCircles
+			Command	= "DeselectCircles"
+			Visible	= false
+			Group   = "Deselect"
+		T_DeselectPolygons
+			Command	= "DeselectPolygons"
+			Visible	= false
+			Group   = "Deselect"
+		T_DeselectNGons
+			Command	= "DeselectNGons"
+			Visible	= false
+			Group   = "Deselect"
+		T_DeselectLinearDimensions
+			Command	= "DeselectLinearDimensions"
+			Visible	= false
+			Group   = "Deselect"
+		T_DeselectRadialDimensions
+			Command	= "DeselectRadialDimensions"
+			Visible	= false
+			Group   = "Deselect"
+		T_DeselectFrontDefaultMaterial
+			Command	= "DeselectFrontDefaultMaterial"
+			Visible	= false
+			Group   = "Deselect"
+		T_DeselectBackDefaultMaterial
+			Command	= "DeselectBackDefaultMaterial"
+			Visible	= false
+			Group   = "Deselect"
+		T_DeselectHidden
+			Command	= "DeselectHidden"
+			Visible	= false
+			Group   = "Deselect"
+		T_DeselectSoftEdges
+			Command	= "DeselectSoftEdges"
+			Visible	= false
+			Group   = "Deselect"
+		T_DeselectSmoothEdges
+			Command	= "DeselectSmoothEdges"
+			Visible	= false
+			Group   = "Deselect"

@@ -1,0 +1,338 @@
+/*
+ * (!) Cleanup
+ */
+
+html
+{
+	border: 0;
+	padding: 0;
+	margin: 0;
+	color: #ddd;
+	background: #555;
+	cursor: default;
+}
+body
+{
+	padding: 5px;
+	margin: 0;
+}
+body
+{
+	scrollbar-face-color: #555;
+	scrollbar-highlight-color: #5f5f5f;
+	scrollbar-shadow-color: #505050;
+	scrollbar-3dlight-color: #777;
+	scrollbar-arrow-color: #ddd;
+	scrollbar-track-color: #4a4a4a;
+	scrollbar-darkshadow-color: #222;
+}
+
+
+/* Set global styles: fonts and cursors */
+html, input, select, textarea, button
+{
+	/*font: caption;*/
+	font-family: 'Segoe UI', 'Tahoma', sans-serif;
+	font-size: 11px;
+	color: #ddd;
+}
+*
+{
+	cursor: default;
+}
+input
+{
+	cursor: auto;
+}
+
+
+/* General Elements */
+p
+{
+	margin: 1em 0;
+}
+
+
+/* Main Header */
+#header.header
+{
+	background: #444 url('../images/fade-light.png') repeat-x;
+	border-bottom: 1px solid #333;
+	margin: -5px -5px 5px -5px;
+	padding: 4px 8px 0px;
+}
+#header.header .title
+{
+	width: 100%;
+	color: white;
+	font-size: 1.5em;
+	font-weight: bold;
+	font-variant: small-caps;
+	letter-spacing: 0.05em;
+	text-decoration: none;
+	text-shadow: #111111 -1px -1px 0px;
+	filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=-1, OffY=-1, Color=#111111, Positive='true');
+}
+#header a[href]
+{
+	cursor: auto;
+	color: #999;
+	border-bottom: 1px solid orange;
+	text-decoration: none;
+}
+#header a[href]:hover
+{
+	color: #333;
+	background: orange;
+}
+
+
+/* Main Footer */
+#footer.footer
+{
+	background: #505050 url('../images/fade-light.png') repeat-x;
+	border-top: 1px solid #333;
+	padding: 4px;
+	text-align: right;
+}
+
+/* Form Elements */
+fieldset
+{
+	border: 1px solid #333;
+	padding: 5px;
+}
+legend
+{
+	color: #d88;
+	margin: 0 0 5px 0;
+}
+
+input[type=text], input[type=file]
+{
+	background: #333;
+	border: 2px inset #666;
+}
+input[type=text]:hover, input[type=file]:hover
+{
+	border: 2px inset orange;
+}
+input[type=text]:focus, input[type=text].focus,
+input[type=file]:focus, input[type=file].focus
+{
+	background: #a85;
+	border: 2px inset orange;
+}
+
+button
+{
+	background: #505050;
+	border: 2px outset #999;
+}
+button:hover
+{
+	background: #999;
+	border: 2px outset #ccc;
+}
+
+
+/* Container */
+label { text-align: right; padding: 2px 5px 0 0; }
+.container
+{
+	position: relative;
+	border: 1px solid #666;
+	padding: 5px;
+	margin-bottom: 3px;
+	overflow: hidden;
+}
+
+/* Buttons */
+.button
+{
+	display: inline-block;
+	/*background: #222;*/
+	background-repeat: no-repeat;
+	width: 70px;
+	height: 25px;
+	border: 0;
+	padding: 0;
+	text-align: center;
+	line-height: 22px;
+}
+.button.normal
+{
+	background-image: url('../images/button_normal.png');
+}
+.button.normal:hover
+{
+	background-image: url('../images/button_normal_hover.png');
+}
+.button.normal.pressed,
+.button.normal.pressed:hover
+{
+	background-image: url('../images/button_normal_pressed.png');
+}
+
+
+/* Toolbars */
+.toolbar
+{
+	background: #505050;
+	border-bottom: 1px solid #333;
+	margin: -5px -5px 0 -5px;
+	padding: 2px;
+}
+.toolbar .separator
+{
+	display: inline-block;
+	background: #333;
+	width: 1px;
+	height: 2em;
+	margin: 0 5px;
+	overflow: hidden;
+	text-indent: 20px;
+}
+.toolbar button
+{
+	padding: 4px 0;
+	border: 1px solid #666;
+}
+.toolbar button + button
+{
+	border-left: none;
+}
+.toolbar button:hover
+{
+	color: #fff;
+	background: #a85;
+}
+
+
+/* Listview */
+table.listview
+{
+	border: 1px solid #666;
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+table.listview thead
+{
+	background: #505080;
+	font-weight: bold;
+}
+table.listview thead th
+{
+	border-bottom: 1px solid #333;
+	border-right: 1px solid #333;
+	padding: 3px 7px;
+}
+table.listview thead th:hover
+{
+	background: #8080c0;
+}
+table.listview tbody
+{
+	cursor: auto;
+}
+table.listview tbody tr:hover
+{
+	background: #a85;
+}
+table.listview tbody tr.selected
+{
+	color: #fff;
+	background: orange;
+}
+table.listview tbody td
+{
+	padding: 3px 5px;
+}
+
+
+/* Foldlist */
+.foldlist
+{
+	background: #555;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+.foldlist h2
+{
+	color: #ddd;
+	background: #4c4c4c;
+	border-bottom: 1px solid #666;
+	margin: 0;
+	padding: 5px 3px;
+	font-size: 1em;
+	font-weight: bold;
+	text-align: center;
+}
+.foldlist li:hover h2
+{
+	color: #fff;
+	background: #333 url('../images/fade-light_05.png') repeat-x;
+}
+.foldlist ul
+{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.foldlist li
+{
+	/*position: relative;*/
+	background: #555;
+}
+.foldlist li:hover
+{
+	background: #444;
+}
+.foldlist ul li
+{
+	padding: 5px 6px 5px 20px;
+}
+
+.foldlist ul li.selected
+{
+	background-image: url('../images/checkmark.png');
+	background-repeat: no-repeat;
+	background-position: 6px 10px;*/
+}
+.foldlist ul > li.locked
+{
+	background-image: url('../images/locked.png');
+}
+.foldlist ul li.add {background-color: #363; }
+.foldlist ul li.add:hover { background-color: #252; }
+.foldlist ul li.remove { background-color: #633; }
+.foldlist ul li.remove:hover { background-color: #522; }
+.foldlist input
+{
+	display: none;
+}
+.foldlist .description
+{
+	color: #999;
+	font-style: italic;
+}
+
+.foldlist .listToggle
+{
+	color: #fff;
+	background: url('../images/arrow_up.png') no-repeat center center;
+	overflow: hidden;
+	text-align: center;
+	text-indent: -200%;
+}
+.foldlist .listToggle:hover
+{
+	background-color: #333;
+}
+.foldlist .listToggle.collapse
+{
+	background-image: url('../images/arrow_down.png');
+}

@@ -1,0 +1,123 @@
+/////////////////////////////
+/// Select Toys Changelog ///
+/////////////////////////////
+
+2.2.2 - 19.03.2013
+      * Added Select Active with Materials
+      * Made independent from TT_Lib.
+
+2.2.0 - 04.02.2010
+      * Select Quad-Face loop now accept mulitple start-edges
+      * Added Selection filters for Border Edges
+      * Added Selection filters for Selection Border
+      * Fixed Select Instances by Layer bug
+      * Updated some method names to reflect changes in TT_Lib 1.2
+	  
+2.1.0 - 04.01.2010
+      * Fixed bug in select_same_direction_faces, select_parallel_faces, select_perpendicular_faces, select_same_area.
+      * Fixed bug in Select Only / Deselect Soft / Smooth Edges
+      * Added Command Cheat Sheet.
+      * Moved from Plugin_Manager to TT_Lib
+	  
+2.0.0 - 28.10.2009
+      * Renamed "Face Loops" to "Select Edge Loops". Trying to avoid confusion with Quad-face loop.
+      * Code refactoring to minimize duplicate code.
+      * Uses Plugin Manager to allow customization of the UI.
+      * Added support for polygon entities for SU7.1M1+.
+      * Added toolbar.
+      * Fixed issues when comparing floating values. Affected Area select.
+      * Fixed group parent bug. (Again!)
+      * Converting groups to components now transfer all but glued_to property and attributes.
+      * Completed selection speed optimization.
+      * Select Active Instances only selects hidden when View Hidden is on.
+      * Improved Select Opposite Face.
+      * Added selection filter Section Planes.
+
+1.15.0 - 15.09.2009
+      * Optimized the speed of most selection functions.
+
+1.14.0 - 15.09.2009
+      * Added tool to select a face's loops.
+
+1.13.0 - 03.08.2009
+      * Removed the Layer filters. Seems that SU might have problems with too many menu items.
+        Reported issues seemed to disappear when the dynamic layer menu was disabled, so these
+        functions will be disabled until this can be resolved.
+
+1.12.0 - 09.07.2009
+      * Added function to select all active entities on selected layers.
+
+1.11.0 - 09.07.2009
+      * Added Layer filters
+      * Added function to select all entities on selected layers.
+
+1.10.1 - 08.07.2009
+      * Forgot to add the menu items for 3D Polylines.
+      * Fixed a bug in the drawingelement filter methods.
+
+1.10.0 - 08.07.2009
+      * Added code for Edge Loop (WIP) Not exposed UI.
+      * Added filters for 3D Polylines.
+      * Modified circle filters to work around a bug where circles report an end angle of 720.
+      * Modified circle filters to account for arches with start-angle other than 0 that makes up 360 degrees.
+      * Corrected a flaw in the .typename optimisations.
+
+1.9.0 - 11.06.2009
+      * Added filters that differs between ArcCurves and Curves.
+      * Fixed a bug in selection Circles where Curves would cause an error.
+
+1.8.0 - 10.06.2009
+      * Optimized code that's using .typename
+      * Added Select Face Same Direction
+      * Added workaround for SU bug where group definition references 
+        becomes corrupted
+
+1.7.1 - 20.05.2009
+      * Added selection of faces of the same area
+      * Added selection of opposite face
+
+1.7.0 - 07.05.2009
+      * Added filters for Images
+
+1.6.1 - 18.03.2009
+      * Added filters for Hidden, Soft and Smooth
+
+1.6.0 - 16.03.2009
+      * Reorganised the selection filter methods
+      * Added support for DimensionRadial and DimensionLinear selection filter
+      * Added Select Parallel and Select Perpendicular faces
+
+1.5.1 - 13.03.2009
+      * Fixed an issue where the DC menu would not appear
+
+1.5.0 - 12.03.2009
+      * Added ability to select DC components by similar family
+
+1.4.0 - 17.02.2009
+      * Filter/Deselect entities with default materials
+
+1.3.2 - 23.01.2009
+      * Prevents Select Active * from selecting items on hidden layers
+
+1.3.1 - 14.01.2009
+      * Eliminating Bugsplats due to recursing
+      * [WIP] Select Connected Faces by Angle
+      * Addressed issue of context menu graying out
+      * Select Active from same Layer
+      * Select All from same Layer
+
+1.2.1 - 07.01.2009
+      * Selection manipulation (filters)
+      * Select Connected Coplanar Edges
+      * Select Connected by Material
+      * Select Connected by Layer
+
+1.1.2 - 16.12.2008
+      * Select Loop from edge
+
+1.0.0 - 13.12.2008
+      * Select Active Instances
+      * Select Instances
+      * Select Active Group Copies
+      * Select Group Copies
+      * Convert Group Copies to Instances

@@ -1,0 +1,32 @@
+html
+{
+	font-family: 'Cambria', serif;
+}
+
+dt
+{
+	clear: both;
+	font-weight: bold;
+}
+dd + dt
+{
+	margin-top: 1em;
+}
+dd
+{
+	margin-left: 2em;
+}
+dd.host
+{
+	color: #999;
+	font-style: italic;
+}
+dd.icon
+{
+	float: left;
+	margin: 0 0.5em 0.5em 0;
+}
+code
+{
+	color: #a00;
+}

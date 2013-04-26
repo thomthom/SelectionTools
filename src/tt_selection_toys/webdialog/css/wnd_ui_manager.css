@@ -1,0 +1,59 @@
+@import url('ui.css');
+
+html
+{
+	overflow: hidden;
+}
+
+#header
+{
+	height: 50px;
+}
+#header .info
+{
+	color: #999;
+	margin-top: 2px;
+	font-style: italic;
+}
+
+#footer
+{
+	position: absolute;
+	bottom: 0;
+	left: 0px;
+	right: 0px;
+	height: 26px;
+}
+
+#listUI
+{
+	position: absolute;
+	top: 55px;
+	bottom: 35px;
+	left: 0;
+	right: 0;
+}
+
+#msgRestart
+{
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	visibility: hidden;
+	background: #b70 url('../images/fade-light.png') repeat-x;
+	padding: 10px 8px;
+	font-weight: bold;
+}
+body.restart #msgRestart
+{
+	visibility: visible;
+}
+
+.foldlist img
+{
+	float: right;
+	background: #444;
+	border: 1px solid #333;
+	padding: 3px;
+}
