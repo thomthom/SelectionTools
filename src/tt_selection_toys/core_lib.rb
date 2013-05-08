@@ -9,7 +9,7 @@ require 'sketchup.rb'
 
 #-----------------------------------------------------------------------------
 
-module Select_Toys
+module TT::Plugins::SelectionToys
   
   ##### STRING #####
   
@@ -306,4 +306,4 @@ module Select_Toys
     return Sketchup.active_model.selection.all? { |e| e.is_a?(entity_class) }
   end
 
-end # module Select_Toys
+end # module

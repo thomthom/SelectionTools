@@ -9,7 +9,7 @@ require 'sketchup.rb'
 
 #-----------------------------------------------------------------------------
 
-module Select_Toys
+module TT::Plugins::SelectionToys
 
 	require File.join( PATH, 'core_lib.rb' )
 	
@@ -116,7 +116,7 @@ module Select_Toys
 				elsif [Numeric, TrueClass, FalseClass].include?(value.class)
 					value = value.to_s
 				else
-					value = "'#{Select_Toys.escape_js(value.to_s)}'"
+					value = "'#{PLUGIN.escape_js(value.to_s)}'"
 				end
 				
 				"'#{key}': #{value}"
@@ -127,4 +127,4 @@ module Select_Toys
 		alias :inspect :to_s
 	end
 
-end # module Select_Toys
+end # module

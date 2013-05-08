@@ -10,15 +10,17 @@ require 'extensions.rb'
 
 #-------------------------------------------------------------------------------
 
-module Select_Toys
-  
+module TT
+ module Plugins
+  module SelectionToys
   
   ### CONSTANTS ### ------------------------------------------------------------
   
   # Plugin information
+  PLUGIN          = self
   PLUGIN_ID       = 'TT_Selection_Toys'.freeze
   PLUGIN_NAME     = 'Selection Toys'.freeze
-  PLUGIN_VERSION  = '2.3.1'.freeze
+  PLUGIN_VERSION  = '2.3.2'.freeze
 
   # Resource paths
   FILENAMESPACE = File.basename( __FILE__, '.rb' )
@@ -38,7 +40,9 @@ module Select_Toys
     Sketchup.register_extension( ex, true )
   end 
 
-end # module
+  end # module SelectionToys
+ end # module Plugins
+end # module TT
 
 #-------------------------------------------------------------------------------
 

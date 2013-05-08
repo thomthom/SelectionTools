@@ -9,7 +9,7 @@ require 'sketchup.rb'
 
 #-----------------------------------------------------------------------------
 
-module Select_Toys
+module TT::Plugins::SelectionToys
 
   require File.join( PATH, 'core_lib.rb' )
   require File.join( PATH, 'json.rb' )
@@ -116,4 +116,4 @@ module Select_Toys
   end
     
  end # module Config
-end # module Select_Toys
+end # module

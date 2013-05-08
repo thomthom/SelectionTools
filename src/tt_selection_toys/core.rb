@@ -10,7 +10,7 @@ require 'tt_selection_toys.rb'
 
 #-----------------------------------------------------------------------------
 
-module Select_Toys
+module TT::Plugins::SelectionToys
 
   require File.join( PATH, 'core_lib.rb' )
   require File.join( PATH, 'ui_manager.rb' )
@@ -886,7 +886,7 @@ module Select_Toys
     end
   end
   
-end # module Select_Toys
+end # module
 
 #-----------------------------------------------------------------------------
 file_loaded(__FILE__)

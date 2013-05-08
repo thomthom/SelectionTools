@@ -9,7 +9,7 @@ require 'sketchup.rb'
 
 #-----------------------------------------------------------------------------
 
-module Select_Toys
+module TT::Plugins::SelectionToys
 
 	require File.join( PATH, 'core_lib.rb' )
 	require File.join( PATH, 'json.rb' )
@@ -180,7 +180,7 @@ module Select_Toys
 			# plugin loads. No need to populate the dialog and use extra resources
 			# if it will never be used.
 			self.set_file(File.dirname(__FILE__) + '/webdialog/ui_manager.html')
-			if Select_Toys.is_mac?
+			if PLUGIN.is_mac?
 				self.show_modal
 			else
 				self.show
@@ -393,7 +393,7 @@ module Select_Toys
 	# @since 1.1.0
 	def show_cheat_sheet
 		html = ''
-    webdialog_path = File.join(PLUGIN_PATH, 'webdialog')
+    webdialog_path = File.join(PATH, 'webdialog')
     filename = File.join(webdialog_path, 'cheat_sheet.html')
 		path = webdialog_path + '/'
 		File.open(filename, 'r') { |f|
@@ -432,4 +432,4 @@ module Select_Toys
 	end
 		
  end # class UI_Manager
-end # module Select_Toys
+end # module
