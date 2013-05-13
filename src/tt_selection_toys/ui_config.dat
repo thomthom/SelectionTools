@@ -15,9 +15,6 @@ Commands
 	UICheatSheet
 		Label		= "Cheat Sheet"
 		Description	= "List all commands."
-	UIEnableToolbar
-		Label		= "Enable Toolbar"
-		Description	= "The Toolbar must be enabled before it'll be availible."
 	SelectFaceLoops
 		Label		= "Select Edge Loops"
 		Description	= "Selects loops on faces."
@@ -378,10 +375,6 @@ UI
 				Group   = "Settings"
 			M_UICheatSheet
 				Command	= "UICheatSheet"
-				Visible	= true
-				Group   = "Settings"
-			M_UIEnableToolbar
-				Command	= "UIEnableToolbar"
 				Visible	= true
 				Group   = "Settings"
 			M_SelectFaceLoops
