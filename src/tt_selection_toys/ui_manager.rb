@@ -416,7 +416,7 @@ module TT::Plugins::SelectionToys
 				str += "\t<dd class='icon'><img src='#{icon}' width='24' height='24' /></dd>\n"
 			end
 			# Get Host Path
-			host = get_host_path(item).join(" » ")
+			host = get_host_path(item).join(" Â» ")
 			str += "\t<dd class='host'>#{host}</dd>\n"
 			# Description
 			str += "\t<dd>#{item['Description']}</dd>\n"
