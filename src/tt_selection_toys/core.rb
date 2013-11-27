@@ -12,6 +12,11 @@ require 'tt_selection_toys.rb'
 
 module TT::Plugins::SelectionToys
 
+  # Shim for the Set class which was moved in SketchUp 2014.
+  if defined?(Sketchup::Set)
+    Set = Sketchup::Set
+  end
+
   require File.join( PATH, 'core_lib.rb' )
   require File.join( PATH, 'ui_manager.rb' )
   
