@@ -91,8 +91,13 @@ module TT::Plugins::SelectionToys
   @uim.add_command('SelectOnlyPolygons')          { self.select() { |e| self.is_polygon?(e) } }
   @uim.add_command('SelectOnlyNGons')             { self.select() { |e| self.is_ngon?(e) } }
   @uim.add_command('SelectOnly3DPolylines')       { self.select_drawingelement('Polyline3d') }
-  @uim.add_command('SelectOnlyLinearDimensions')  { self.select_drawingelement('DimensionLinear') }
-  @uim.add_command('SelectOnlyRadialDimensions')  { self.select_drawingelement('DimensionRadial') }
+  if Sketchup.version.to_i < 14
+    @uim.add_command('SelectOnlyLinearDimensions')  { self.select_drawingelement('DimensionLinear') }
+    @uim.add_command('SelectOnlyRadialDimensions')  { self.select_drawingelement('DimensionRadial') }
+  else
+    @uim.add_command('SelectOnlyLinearDimensions')  { self.select(Sketchup::DimensionLinear) }
+    @uim.add_command('SelectOnlyRadialDimensions')  { self.select(Sketchup::DimensionRadial) }
+  end
   @uim.add_command('SelectOnlyFrontDefaultMaterial')  { self.select_default_material(false) }
   @uim.add_command('SelectOnlyBackDefaultMaterial')   { self.select_default_material(true) }
   @uim.add_command('SelectOnlyHidden')            { self.select() { |e| e.hidden? } }
@@ -116,8 +121,13 @@ module TT::Plugins::SelectionToys
   @uim.add_command('DeselectPolygons')            { self.deselect() { |e| self.is_polygon?(e) } }
   @uim.add_command('DeselectNGons')               { self.deselect() { |e| self.is_ngon?(e) } }
   @uim.add_command('Deselect3DPolylines')         { self.deselect_drawingelement('Polyline3d') }
-  @uim.add_command('DeselectLinearDimensions')    { self.deselect_drawingelement('DimensionLinear') }
-  @uim.add_command('DeselectRadialDimensions')    { self.deselect_drawingelement('DimensionRadial') }
+  if Sketchup.version.to_i < 14
+    @uim.add_command('DeselectLinearDimensions')    { self.deselect_drawingelement('DimensionLinear') }
+    @uim.add_command('DeselectRadialDimensions')    { self.deselect_drawingelement('DimensionRadial') }
+  else
+    @uim.add_command('DeselectLinearDimensions')    { self.deselect(Sketchup::DimensionLinear)  }
+    @uim.add_command('DeselectRadialDimensions')    { self.deselect(Sketchup::DimensionRadial) }
+  end
   @uim.add_command('DeselectFrontDefaultMaterial')  { self.deselect_default_material(false) }
   @uim.add_command('DeselectBackDefaultMaterial')   { self.deselect_default_material(true) }
   @uim.add_command('DeselectHidden')              { self.deselect() { |e| e.hidden? } }
