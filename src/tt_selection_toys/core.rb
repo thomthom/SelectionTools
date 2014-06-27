@@ -319,7 +319,8 @@ module TT::Plugins::SelectionToys
       next unless e.is_a?(Sketchup::Edge)
       entities << self.select_quadface_loop(e)
     }
-    entities.flatten!.uniq!
+    entities.flatten!
+    entities.uniq!
     sel.add(entities)
   end
   
@@ -723,7 +724,7 @@ module TT::Plugins::SelectionToys
     
     def select_by_angle
       sel = Sketchup.active_model.selection.clear()
-      Select_Toys::select_connected_faces(@face) { |face|
+      PLUGIN::select_connected_faces(@face) { |face|
         angle = @face.normal.angle_between(face.normal).radians
         angle <= @angle
       }

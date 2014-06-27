@@ -20,7 +20,7 @@ module TT
   PLUGIN          = self
   PLUGIN_ID       = 'TT_Selection_Toys'.freeze
   PLUGIN_NAME     = 'Selection Toys'.freeze
-  PLUGIN_VERSION  = '2.3.7'.freeze
+  PLUGIN_VERSION  = '2.3.8'.freeze
 
   # Resource paths
   FILENAMESPACE = File.basename( __FILE__, '.rb' )
