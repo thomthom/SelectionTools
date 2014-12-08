@@ -20,10 +20,12 @@ module TT
   PLUGIN          = self
   PLUGIN_ID       = 'TT_Selection_Toys'.freeze
   PLUGIN_NAME     = 'Selection Toys'.freeze
-  PLUGIN_VERSION  = '2.3.8'.freeze
+  PLUGIN_VERSION  = '2.3.9'.freeze
 
   # Resource paths
-  FILENAMESPACE = File.basename( __FILE__, '.rb' )
+  file = File.expand_path( __FILE__ )
+  file.force_encoding( "UTF-8" ) if file.respond_to?( :force_encoding )
+  FILENAMESPACE = File.basename( file, '.*' )
   PATH_ROOT     = File.dirname( __FILE__ ).freeze
   PATH          = File.join( PATH_ROOT, FILENAMESPACE ).freeze
   
