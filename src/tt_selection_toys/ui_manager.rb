@@ -122,7 +122,6 @@ module TT::Plugins::SelectionToys
 		
 		# Prepare webdialog object
 		super @config['General']['Title'], false, 'pm_uim', 500, 325, 100, 100, true
-		#self.set_file(File.dirname(__FILE__) + '/webdialog/ui_manager.html') # See .show_window
 		self.navigation_buttons_enabled = false if self.respond_to?(:navigation_buttons_enabled)
 		self.min_width = 330	 if self.respond_to?(:min_width)
 		self.min_height = 200	 if self.respond_to?(:min_height)
@@ -179,7 +178,7 @@ module TT::Plugins::SelectionToys
 			# We use set_file here to prevent Macs loading the whole dialog when the
 			# plugin loads. No need to populate the dialog and use extra resources
 			# if it will never be used.
-			self.set_file(File.dirname(__FILE__) + '/webdialog/ui_manager.html')
+			filepath = File.join(PATH, 'webdialog/ui_manager.html')
 			if PLUGIN.is_mac?
 				self.show_modal
 			else
