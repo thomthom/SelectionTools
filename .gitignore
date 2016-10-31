@@ -1,4 +1,6 @@
 *.sublime-*
+*.rbz
+
 archive/*
 docs/*
 media/*

@@ -179,6 +179,7 @@ module TT::Plugins::SelectionToys
 			# plugin loads. No need to populate the dialog and use extra resources
 			# if it will never be used.
 			filepath = File.join(PATH, 'webdialog/ui_manager.html')
+			self.set_file(filepath)
 			if PLUGIN.is_mac?
 				self.show_modal
 			else
