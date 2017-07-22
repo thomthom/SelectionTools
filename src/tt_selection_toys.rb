@@ -20,7 +20,7 @@ module TT
   PLUGIN          = self
   PLUGIN_ID       = 'TT_Selection_Toys'.freeze
   PLUGIN_NAME     = 'Selection Toys'.freeze
-  PLUGIN_VERSION  = '2.3.11'.freeze
+  PLUGIN_VERSION  = '2.4.0'.freeze
 
   # Resource paths
   file = File.expand_path( __FILE__ )
@@ -37,7 +37,7 @@ module TT
     ex = SketchupExtension.new( PLUGIN_NAME, file )
     ex.description = "Suite of tools to create, manipulate and filter selections."
     ex.version = PLUGIN_VERSION
-    ex.copyright = 'Thomas Thomassen © 2008–2016'
+    ex.copyright = 'Thomas Thomassen © 2008–2017'
     ex.creator = 'Thomas Thomassen (thomas@thomthom.net)'
     Sketchup.register_extension( ex, true )
   end 
