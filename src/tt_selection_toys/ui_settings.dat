@@ -82,6 +82,7 @@ M_ConnectedMaterial_F = true
 M_ConnectedBackMaterial = true
 M_ConnectedLayer_F = true
 M_FacesSameDirection = true
+M_FacesCoplanar = true
 M_ParallelFaces = true
 M_PerpendicularFaces = true
 M_FacesArea = true

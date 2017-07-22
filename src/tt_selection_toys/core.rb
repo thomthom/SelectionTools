@@ -60,11 +60,13 @@ module TT::Plugins::SelectionToys
   @uim.add_command('ConnectedPerpendicularFaces') { self.select_connected_perpendicular_faces() }
   @uim.add_command('ConnectedParallelFaces')      { self.select_connected_parallel_faces() }
   @uim.add_command('ConnectedCoplanarFaces')      { self.select_connected_planar_faces() }
+  @uim.add_command('ConnectedSameDirectionFaces') { self.select_connected_same_direction_faces() }
   @uim.add_command('ConnectedFacesAngle')         { self.tool(Select_Connected_Faces_By_Angle_Tool.new) }
   @uim.add_command('ConnectedFacesArea')          { self.select_connected_same_area() }
   @uim.add_command('PerpendicularFaces')          { self.select_perpendicular_faces() }
   @uim.add_command('FacesSameDirection')          { self.select_same_direction_faces() }
   @uim.add_command('ParallelFaces')               { self.select_parallel_faces() }
+  @uim.add_command('CoplanarFaces')               { self.select_coplanar_faces() }
   @uim.add_command('OppositeFaces')               { self.select_opposite_faces() }
   @uim.add_command('FacesArea')                   { self.select_same_area() }
   # Edge / Face
@@ -354,11 +356,20 @@ module TT::Plugins::SelectionToys
   
   
   ### FACES ### -----------------------------------------------------------
-  # --- Select Connected Planar Faces ---
-  def self.select_connected_planar_faces
+  # --- Select Connected Same Direction Faces ---
+  def self.select_connected_same_direction_faces
     face = Sketchup.active_model.selection[0]
     self.select_connected_faces(face) { |f|
       f.normal.samedirection?(face.normal)
+    }
+  end
+
+  # --- Select Connected Planar Faces ---
+  def self.select_connected_planar_faces
+    face = Sketchup.active_model.selection.grep(Sketchup::Face).first
+    plane = face.plane
+    self.select_connected_faces(face) { |f|
+      f.vertices.all? { |v| v.position.on_plane?(plane) }
     }
   end
   
@@ -420,6 +431,14 @@ module TT::Plugins::SelectionToys
       end
     }
     sel.add(op)
+  end
+
+  # --- Select co-planar faces ---
+  def self.select_coplanar_faces
+    plane = Sketchup.active_model.selection.grep(Sketchup::Face).first.plane
+    self.select_active_entities { |e|
+      e.is_a?(Sketchup::Face) && e.vertices.all? { |v| v.position.on_plane?(plane) }
+    }
   end
 
   # --- Select Faces in same direction ---

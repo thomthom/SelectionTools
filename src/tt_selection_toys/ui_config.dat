@@ -336,6 +336,9 @@ Commands
 	ConnectedParallelFaces
 		Label		= "Connected Parallel Faces"
 		Description	= ""
+	ConnectedSameDirectionFaces
+		Label		= "Connected Same Direction Faces"
+		Description	= ""
 	ConnectedCoplanarFaces
 		Label		= "Connected Coplanar Faces"
 		Description	= ""
@@ -349,6 +352,9 @@ Commands
 		Label		= "Perpendicular Faces"
 		Description	= ""
 	FacesSameDirection
+		Label		= "Same Direction Faces"
+		Description	= ""
+	CoplanarFaces
 		Label		= "Coplanar Faces"
 		Description	= ""
 	ParallelFaces
@@ -464,6 +470,10 @@ UI
 				Command	= "ConnectedLayer"
 				Visible	= true
 				Group   = "SelectEdges"
+			M_ConnectedSameDirectionFaces
+				Command	= "ConnectedSameDirectionFaces"
+				Visible	= true
+				Group   = "SelectConnectedFaces"
 			M_ConnectedCoplanarFaces
 				Command	= "ConnectedCoplanarFaces"
 				Visible	= true
@@ -496,6 +506,10 @@ UI
 				Command	= "ConnectedLayer"
 				Visible	= true
 				Group   = "SelectConnectedFaces"
+			M_CoplanarFaces
+				Command	= "CoplanarFaces"
+				Visible	= true
+				Group   = "SelectSimilarFaces"
 			M_FacesSameDirection
 				Command	= "FacesSameDirection"
 				Visible	= true
