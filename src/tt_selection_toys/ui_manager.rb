@@ -14,21 +14,21 @@ module TT::Plugins::SelectionToys
 	require File.join( PATH, 'core_lib.rb' )
 	require File.join( PATH, 'json.rb' )
 	require File.join( PATH, 'config.rb' )
- 
+
  # @todo Complete documentation and examples.
  #
  # @since 1.0.0
  class UI_Manager < UI::WebDialog
 
-	VERSION = '1.1.0'	
-	
+	VERSION = '1.1.0'
+
 	# Create new object with path to config file.
 	#
 	# @param [String] config_file Path to config file.
 	#
 	# @since 1.0.0
 	def initialize(config_file)
-		
+
 		# Load configuration
 		@config = Config.read(config_file)
 		@config['General']['ConfigFile'] = config_file
@@ -37,7 +37,7 @@ module TT::Plugins::SelectionToys
 		# Load Settings
 		@config['General']['Settings'] = @config['General']['ConfigPath'] + @config['General']['Settings']
 		settings = Config.read(@config['General']['Settings'])
-		
+
 		# Links the Command ID's with the actual Procs which is defined by .add_command.
 		@procs = {}
 		# Index of procs that must return true for the UI element to be added.
@@ -51,7 +51,7 @@ module TT::Plugins::SelectionToys
 		# Flag indicating if our menu UI has been built
 		@menus_added = false
 		@toolbars_added = false
-		
+
 		# Index of hosts for the UI elements. Be it Toolbars, Menus, Context Menus.
 		# Build host list
 		# {
@@ -76,7 +76,7 @@ module TT::Plugins::SelectionToys
 		}
 
 		# Iterate over the nested JSON objects and create a flat JSON list
-		# for easy access to each element. 
+		# for easy access to each element.
 		# For each UI element we fetch the Label and Description based on
 		# the command associated.
 		# We also read in the @settings data is availible.
@@ -84,10 +84,10 @@ module TT::Plugins::SelectionToys
 		# the parent UI element - (toolbar, menu or sub-menu).
 		while element = elements.shift
 			id, item = element
-			
+
 			# Add to UI list
 			@ui[id] = item
-			
+
 			# Merge in data for the item based on it's command.
 			cmd = @config['Commands'][ item['Command'] ]
 			if cmd.nil?
@@ -98,12 +98,12 @@ module TT::Plugins::SelectionToys
 			@ui[id]['Description']	= cmd['Description']
 			@ui[id]['SmallIcon']	= cmd['SmallIcon'] if cmd.key?('SmallIcon')
 			@ui[id]['LargeIcon']	= cmd['LargeIcon'] if cmd.key?('LargeIcon')
-			
+
 			# Merge @settings
 			unless settings.nil? || settings[id].nil?
 				@ui[id]['Visible'] = settings[id] unless @ui[id]['Locked']
 			end
-			
+
 			# Look for child elements
 			item.each { |child_id, child_item|
 				if child_item.is_a?(JSON)
@@ -119,7 +119,7 @@ module TT::Plugins::SelectionToys
 		# Cleanup a bit - get rid of the child JSON elements.
 		#@ui.reject! { |key, value| value.is_a?(JSON) }
 		#@ui.each {|k,v| v.reject! { |key, value| value.is_a?(JSON) } }
-		
+
 		# Prepare webdialog object
 		super @config['General']['Title'], false, 'pm_uim', 500, 325, 100, 100, true
 		self.navigation_buttons_enabled = false if self.respond_to?(:navigation_buttons_enabled)
@@ -128,7 +128,7 @@ module TT::Plugins::SelectionToys
 		# Callbacks
 		self.add_action_callback('ready') { |dialog, params|
 			puts '>> Dialog Ready'
-			
+
 			# Previously we sent each of these sections one by one, but due to Mac's async
 			# nature that didn't work as the dialog had not created the hosts before it tried
 			# to add the UI elements. So now we compile one big JSON and let JS sort it out.
@@ -164,9 +164,9 @@ module TT::Plugins::SelectionToys
 			puts '>> Cancel'
 			dialog.close
 		}
-		
+
 	end
-	
+
 	# Open or bring to front the window.
 	#
 	# @return [nil]
@@ -187,18 +187,18 @@ module TT::Plugins::SelectionToys
 			end
 		end
 	end
-	
+
 	# @since 1.0.0
 	def enable_toolbars
 		Sketchup.write_default(@config['General']['AppID'], 'EnableToolbars', true)
 		build_ui()
 	end
-	
+
 	# @since 1.0.0
 	def toolbars_enabled?
 		return Sketchup.read_default(@config['General']['AppID'], 'EnableToolbars', false)
 	end
-	
+
 	# Returns the UI::Command object on success - which the you can perform additional
 	# actions to, such as adding validating procs.
 	# Returns nil on failure.
@@ -220,7 +220,7 @@ module TT::Plugins::SelectionToys
 		#puts "> Command '#{id}' registered!"
 		return @procs[id]
 	end
-	
+
 	# The ID should match the UI element ID. When a new item is added, it checks the
 	# hash of validating procs for it's ID and evaluates the proc.
 	#
@@ -230,7 +230,7 @@ module TT::Plugins::SelectionToys
 	def add_eval(id, &command)
 		@val[id] = command
 	end
-	
+
 	# Build the UI. Add all toolbars and menus.
 	# @since 1.0.0
 	def build_ui
@@ -253,7 +253,6 @@ module TT::Plugins::SelectionToys
 				#toolbar.restore if toolbar.get_last_state == TB_VISIBLE
 				if toolbar.get_last_state == TB_VISIBLE
 					toolbar.restore
-					UI.start_timer( 0.1, false ) { toolbar.restore } # SU bug 2902434
 				end
 			elsif type == 'Menu'
 				next if @menus_added
@@ -272,7 +271,7 @@ module TT::Plugins::SelectionToys
 		@menus_added = true
 		@toolbars_added = toolbars_enabled?
 	end
-	
+
 	# Build menus from JSON structure
 	# @private
 	# @since 1.0.0
@@ -288,7 +287,7 @@ module TT::Plugins::SelectionToys
 		}
 	end
 	private :build_menus
-	
+
 	# host: Toolbar or Menu where the item is inserted to
 	# ui_is: string ID of the UI element
 	# @private
@@ -299,10 +298,10 @@ module TT::Plugins::SelectionToys
 			return nil if host.nil?
 			# Only add items which is visible
 			return nil unless !@ui[ui_id].nil? && @ui[ui_id]['Visible']
-			
+
 			# Fetch the Item data
 			item = @ui[ui_id]
-			
+
 			# Validate the item
 			# ID rules
 			return nil if @val.key?(ui_id) && @val[ui_id].call == false
@@ -312,7 +311,7 @@ module TT::Plugins::SelectionToys
 				group = "@Group:#{@ui[ui_id]['Host']}>#{@ui[ui_id]['Group']}"
 				return nil if @val.key?(group) && @val[group].call == false
 			end
-			
+
 			# Groups - Separators
 			# We cache the last used group name for each host.
 			# If the item spesifies a group and it's different from what we have caches,
@@ -331,7 +330,7 @@ module TT::Plugins::SelectionToys
 			# If item has a group defined the ID will be a string, otherwise it's be nil.
 			# We do this to prevent a separator being added to the top of each menu.
 			@groups[groupId] = item['Group']
-			
+
 			# Insert the item
 			if item['sub_menu']
 				cmd = item['Command']
@@ -370,7 +369,7 @@ module TT::Plugins::SelectionToys
 		}
 	end
 	private :get_host_path
-	
+
 	# @private
 	# @since 1.1.0
 	def get_shortcut(item)
@@ -381,7 +380,7 @@ module TT::Plugins::SelectionToys
 		path << item['Label']
 		path = path.join('/')
 		#puts path
-		
+
 		Sketchup.get_shortcuts.each { |s|
 			hotkey, p = s.split("\t")
 			return hotkey if p == path
@@ -389,7 +388,7 @@ module TT::Plugins::SelectionToys
 		return nil
 	end
 	private :get_shortcut
-	
+
 	# @since 1.1.0
 	def show_cheat_sheet
 		html = ''
@@ -403,7 +402,7 @@ module TT::Plugins::SelectionToys
 		@ui.each { |id,item|
 			# Ignore Submenus
 			#next if item.key?('sub_menu') && item['sub_menu']
-			
+
 			# Get Shortcut
 			hotkey = get_shortcut(item)
 			hotkey = "<code>(#{hotkey})</code>" unless hotkey.nil?
@@ -425,11 +424,11 @@ module TT::Plugins::SelectionToys
 		html.gsub!('%PATH%', path)
 		html.gsub!('%TITLE%', @config['General']['Title'])
 		html.gsub!('%CONTENT%', content)
-	
+
 		w = UI::WebDialog.new("#{@config['General']['Title']} Cheat Sheet")
 		w.set_html(html)
 		w.show
 	end
-		
+
  end # class UI_Manager
 end # module
