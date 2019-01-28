@@ -1,0 +1,21 @@
+require: rubocop-sketchup
+
+AllCops:
+  DisabledByDefault: true
+  DisplayStyleGuide: true
+  ExtraDetails: true
+  SketchUp:
+    SourcePath: src # Path to extension sources in project directory.
+    TargetSketchUpVersion: 2016 M1
+
+SketchupDeprecations:
+  Enabled: true
+
+SketchupPerformance:
+  Enabled: true
+
+SketchupRequirements:
+  Enabled: true
+
+SketchupSuggestions:
+  Enabled: true
