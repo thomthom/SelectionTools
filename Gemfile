@@ -7,7 +7,7 @@ group :test do
 end
 
 group :development do
-  gem 'nokogiri', '~> 1.9.0'
+  gem 'nokogiri', '~> 1.10.4'
   gem 'rubocop', '~> 0.61.0'
   gem 'rubocop-sketchup', '~> 0.6.0'
   gem 'sketchup-api-stubs'
