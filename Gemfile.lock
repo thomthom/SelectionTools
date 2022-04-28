@@ -5,7 +5,7 @@ GEM
       json
     ast (2.4.0)
     backport (1.1.2)
-    git (1.6.0)
+    git (1.11.0)
       rchardet (~> 1.8)
     jaro_winkler (1.5.4)
     json (2.3.0)
@@ -13,6 +13,8 @@ GEM
     mini_portile2 (2.4.0)
     minitest (5.14.0)
     naturally (2.2.0)
+    nokogiri (1.10.9)
+      mini_portile2 (~> 2.4.0)
     nokogiri (1.10.9-x64-mingw32)
       mini_portile2 (~> 2.4.0)
     nokogiri (1.10.9-x86-mingw32)
@@ -62,6 +64,7 @@ GEM
 PLATFORMS
   x64-mingw32
   x86-mingw32
+  x86_64-linux
 
 DEPENDENCIES
   appveyor-worker (~> 0.2)
